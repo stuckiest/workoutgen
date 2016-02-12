@@ -1,0 +1,26 @@
+<h1>Exercise Library</h1>
+<div class="exercise index">
+
+	<%= link_to("Add a New Exercise to Your Library", '#', :class => 'action new') %>
+
+	<table class="listing" summary="Exercise list">
+		<tr class="header">
+			<th>Exercise</th>
+			<th>Exercise Type</th>
+			<th>Actions</th>
+		</tr>
+
+		<% @exercises.each do |exercise| %>
+
+		<tr>
+			<td><%= exercise.name %></td>
+			<td><%= exercise.exercise_type %></td>
+			<td class="actions">
+				<%= link_to("Show", '#', :class => 'action show') %>
+				<%= link_to("Edit", '#', :class => 'action edit') %>
+				<%= link_to("Delete", '#', :class => 'action delete') %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
