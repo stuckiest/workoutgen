@@ -1,17 +1,8 @@
 Rails.application.routes.draw do
-  resources :exercises
+ resources :workouts
+ resources :exercises
 
-  # get 'exercises/index'
-
-  # get 'exercises/show'
-
-  # get 'exercises/new'
-
-  # get 'exercises/edit'
-
-  # get 'exercises/delete'
-
-  root "exercises#index"
+  root "workouts#index"
 
   # match ':controller(/:action(:id))', :via => :get
 

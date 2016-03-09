@@ -1,0 +1,26 @@
+<h1>Workouts</h1>
+<div class="workout index">
+
+	<%= link_to 'Add a New Workout', new_workout_path %>
+
+	<table class="listing" summary="workout list">
+		<tr class="header">
+			<th>Name</th>
+			<th>Description</th>
+			<th>Actions</th>
+		</tr>
+
+		<% @workout.each do |workout| %>
+
+		<tr>
+			<td><%= workout.name %></td>
+			<td><%= workout.description %></td>
+			<td class="actions">
+				<%= link_to'Show', workout_path(workout) %>
+				<%= link_to'Edit', edit_workout_path(workout)%>
+				<%= link_to 'Destroy workout', workout, method: :delete, data: {confirm: 'Are you sure?'} %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
