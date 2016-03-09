@@ -1,2 +1,12 @@
-<h1>Exercises#new</h1>
-<p>Find me in app/views/exercises/new.html.erb</p>
+<h1> New Exercise </h1>
+<%= form_for @exercise do |f| %>
+  <%= f.label :name %>: 
+  <%= f.text_field :name %>
+
+  <%= f.label :exercise_type %> 
+  <%= f.text_field :exercise_type %>
+
+  <%= f.submit %>
+<% end %>
+
+<!-- I want the exercise_type to be a drop-down menu -->
