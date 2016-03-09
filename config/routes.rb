@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :exercises
+
   # get 'exercises/index'
 
   # get 'exercises/show'
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
   root "exercises#index"
 
-  match ':controller(/:action(:id))', :via => :get
+  # match ':controller(/:action(:id))', :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
